@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <h4>{{data["username"]}} monthly report</h4>
+        <p>Total No of tickets booked by {{data["username"]}} : {{data["no_of_tickets"]}}</p>
+        {% if data["show_names"] != [] %}
+        <p>Movies watched by the user:</p>
+        <ul>
+            <h5> Movie - Genre - Tickets booked - booked on</h5>
+            {% for d in data["show_names"] %}
+            <li>{{d[0]}} - {{d[1]}} - {{d[2]}} - {{d[3]}} </li>
+            {% endfor%}
+        </ul>
+        {% else %}
+        <p>It seems like you haven't booked anything. Head over to the ticketnew site to book  tickets for your favorite shows.</p>
+        {% endif %}
+    </body>
+</html>

@@ -1,0 +1,10 @@
+Flask
+Flask-SQLAlchemy
+Flask-security-too
+Flask-caching
+Celery[redis]
+bleach
+redis
+redis-server
+requests
+smtplib
